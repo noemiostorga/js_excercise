@@ -37,7 +37,7 @@ for(var i=0;i<=100;i++){
 	}
 
 list.innerHTML += listItem;
-///////
+///////////
 var a;
 console.log(a);
 //////
@@ -62,7 +62,7 @@ var initialValue = 0;
 
 var total = data.reduce(reducer, initialValue);
 
-console.log(total)
+console.log(total);
 
 
 
