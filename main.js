@@ -50,19 +50,45 @@ var Alphabet =["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","
 
 console.log(count(12));
 //////
-
 var data = [];
 
-var reducer = function(accumulator, item){
-	return accumulator + item ;
+var initialValue = 10;
+
+var reducer = function(acumulator, item){
+	return acumulator + item;
 }
-
-
-var initialValue = 0;
 
 var total = data.reduce(reducer, initialValue);
 
 console.log(total);
+
+//////
+
+var Flavors = [
+	"vanilla",
+	"chocolate",
+	"vanilla",
+	"vanilla",
+	"strawberry",
+	"chocolate",
+	"vanilla"
+]
+
+var initialValue={};
+
+var reducer = function(tally, votes){
+	if(!tally[votes]){
+		tally[votes] = 1;
+	}else{
+		tally[votes] = tally[votes] + 1;
+	}
+	return tally;
+}
+
+var total = Flavors.reduce(reducer, initialValue);
+
+console.log(total);
+
 
 
 
